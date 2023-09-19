@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Road
   - Enemy
+  - Attack
+  - Waypoint
+  - 1hit
+  - bullet
+  - waypointenemy
   layers:
   - Default
   - TransparentFX
