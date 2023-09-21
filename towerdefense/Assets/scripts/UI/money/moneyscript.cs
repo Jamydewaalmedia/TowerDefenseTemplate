@@ -9,11 +9,11 @@ public class moneyscript : MonoBehaviour
 
     public TextMeshProUGUI text;
     public int moneyCount;
-    public bool canspawn;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        text = TextMeshProUGUI.FindObjectOfType<TextMeshProUGUI>();
     }
 
     // Update is called once per frame
@@ -21,19 +21,10 @@ public class moneyscript : MonoBehaviour
     {
         
     }
-    void moneyfunction(int money)
+    public void moneyfunction(int money)
     {
-        moneyCount += money;
-        if (moneyCount < 100)
-        {
+        moneyCount = moneyCount + money;
 
-            canspawn = false;
-        }
-        if (canspawn)
-        {
-            moneyfunction(-100);
-            text.text = "money : " + moneyCount;
-            
-        }
+        text.text = "money : " + moneyCount;
     }
 }

@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHp: 50
+  moneyScript: {fileID: 0}
 --- !u!114 &7569165257086776855
 MonoBehaviour:
   m_ObjectHideFlags: 0
