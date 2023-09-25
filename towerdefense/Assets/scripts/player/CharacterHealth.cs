@@ -5,18 +5,20 @@ using UnityEngine;
 public class CharacterHealth : MonoBehaviour
 {
     public int maxHealth = 400; // Maximum health points
-    [SerializeField]
-    public   int currentHealth; // Current health points
+   
+    [SerializeField]  int currentHealth; // Current health points
     public GameObject findenemy;
-    bool movemnt;
-    public GameObject bulletprefab;
+    bool movement;
+    public GameObject BulletPrefab;
+    private Money money;
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth; // Initialize current health
-        movemnt = true;
+        movement = true;
+        money = FindAnyObjectByType<Money>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class CharacterHealth : MonoBehaviour
 
         else
         {
-            if (movemnt == true)
+            if (movement == true)
             {
 
                 transform.position = Vector2.MoveTowards(transform.position, findenemy.transform.position, 0.5f * Time.deltaTime);
@@ -57,6 +59,10 @@ public class CharacterHealth : MonoBehaviour
     // Customize this method for specific behavior upon character death
     private void HandleDeath()
     {
+        if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            money.AddMoney(150);
+        }
         Destroy(gameObject);
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -69,26 +75,16 @@ public class CharacterHealth : MonoBehaviour
             TakeDamage(25);
 
 
-            movemnt = true;
+            movement = true;
         }
-        if (col.gameObject.CompareTag("1hit"))
+        if (col.gameObject.CompareTag("Attack"))
         {
-
-            GameObject bullet = Instantiate(bulletprefab);
-            bullet.transform.position = col.gameObject.transform.position;
+           TakeDamage(25);
 
 
-
-
-
-            movemnt = true;
-            if (col.gameObject.CompareTag("bullet"))
-            {
-                
-                TakeDamage(2000);
-
-            }
         }
+        
+       
 
     }
 }

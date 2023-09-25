@@ -5,23 +5,16 @@ using UnityEngine;
 public class enemyHP : MonoBehaviour
 {
     public int enemyHp;
-   
-    
-    
 
-    // Start is called before the first frame update
-    void Start()
+
+    private Money money;
+
+
+    private void Start()
     {
-       
-
-
+        money = FindAnyObjectByType<Money>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.CompareTag("Attack"))
@@ -31,12 +24,7 @@ public class enemyHP : MonoBehaviour
 
             if (enemyHp <= 0)
             {
-                GameObject doelObject = GameObject.Find("Money");
-                if (doelObject != null)
-                {
-                    doelObject.SendMessage("moneyfunction", +150);
-                }
-                
+                money.AddMoney(150);
 
                 GameObject.Destroy(gameObject);
 

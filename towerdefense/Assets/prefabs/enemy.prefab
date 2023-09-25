@@ -127,12 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08761948de6012c4a95cca53ba063889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHp: 100
-  movemnt: 1
-  destination: {x: 0, y: 0}
-  waypoint: {fileID: 0}
-  alive: 1
-  enemy: {fileID: 0}
+  target: {fileID: 0}
+  speed: 1
 --- !u!50 &5356688107793770851
 Rigidbody2D:
   serializedVersion: 4
@@ -167,7 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHp: 50
-  moneyScript: {fileID: 0}
 --- !u!114 &7569165257086776855
 MonoBehaviour:
   m_ObjectHideFlags: 0

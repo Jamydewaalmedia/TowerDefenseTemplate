@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 299329319402078556}
   - component: {fileID: 299329319402078558}
   - component: {fileID: 299329319402078369}
-  - component: {fileID: 299329319402078368}
+  - component: {fileID: 255732009157546569}
   m_Layer: 0
   m_Name: Square
   m_TagString: Attack
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &299329319402078368
+--- !u!114 &255732009157546569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 299329319402078557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e2a729404f3ec246a5ca7c324cdaf29, type: 3}
+  m_Script: {fileID: 11500000, guid: 69bfdcb9f25e680409fbc680e5056ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 400
+  currentHealth: 0
   findenemy: {fileID: 0}
-  knightHp: 100
-  movemnt: 1
-  bulletprefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
+  BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}

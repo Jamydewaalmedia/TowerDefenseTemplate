@@ -217,14 +217,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 128123589}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f2f61918e2264a4da6e756b2679beea, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c2bdf93385fa4642bad09a4bc82313e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoint: {fileID: 4581748}
-  trooperprefab: {fileID: 299329319402078557, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
-  text: {fileID: 0}
-  canspawnknight: 0
-  moneyScript: {fileID: 1931769882}
+  spawnPrefab: {fileID: 299329319402078557, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
+  spawnPoint: {fileID: 4581749}
+  spawnCost: 100
+  Money: {fileID: 1931769882}
 --- !u!1 &150253274
 GameObject:
   m_ObjectHideFlags: 0
@@ -506,7 +505,12 @@ MonoBehaviour:
   spawnPrefab: {fileID: 7141745766424271929, guid: ebb1de1df7f30e344bc6a4742ee55ca5, type: 3}
   spawnPoint: {fileID: 4581749}
   spawnCost: 200
-  moneyScript: {fileID: 1931769882}
+  Money: {fileID: 1931769882}
+--- !u!1 &579517092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 299329319402078557, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
+  m_PrefabInstance: {fileID: 299329319483945377}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &596299911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1574,6 +1578,7 @@ GameObject:
   - component: {fileID: 1651489152}
   - component: {fileID: 1651489151}
   - component: {fileID: 1651489150}
+  - component: {fileID: 1651489153}
   m_Layer: 0
   m_Name: wall (2)
   m_TagString: 1hit
@@ -1674,6 +1679,19 @@ Transform:
   m_Father: {fileID: 186515344}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1651489153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651489149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38d8388e4760cb34badc871333a80236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
 --- !u!1 &1688536462
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,8 +1909,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 128123592}
-        m_TargetAssemblyTypeName: troopspawner, Assembly-CSharp
-        m_MethodName: spawntroop
+        m_TargetAssemblyTypeName: Spawner, Assembly-CSharp
+        m_MethodName: SpawnObject
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2116,7 +2134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1931769879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399c089c72ef0bf44bfdb21ed151e153, type: 3}
+  m_Script: {fileID: 11500000, guid: fa98dfc488672984986aa08f82eec66c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
@@ -2128,6 +2146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 128123591}
     m_Modifications:
+    - target: {fileID: 299329319402078368, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 299329319402078368, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
       propertyPath: bulletprefab
       value: 
@@ -2180,13 +2202,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 299329319402078368, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
 --- !u!4 &299329319483945378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 299329319402078559, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
   m_PrefabInstance: {fileID: 299329319483945377}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &299329319483945383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579517092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69bfdcb9f25e680409fbc680e5056ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  findenemy: {fileID: 0}
+  BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
 --- !u!1001 &1164296128963929320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2390,6 +2429,10 @@ PrefabInstance:
     - target: {fileID: 7141745766424271929, guid: ebb1de1df7f30e344bc6a4742ee55ca5, type: 3}
       propertyPath: m_Name
       value: Riot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7141745766424271929, guid: ebb1de1df7f30e344bc6a4742ee55ca5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7141745766424271931, guid: ebb1de1df7f30e344bc6a4742ee55ca5, type: 3}
       propertyPath: m_RootOrder

@@ -6,12 +6,12 @@ public class bulletScript : MonoBehaviour
 {
     public GameObject bullet;
     public GameObject findknight;
-    private allieshp allieshpscript;
+    private CharacterHealth characterHealth;
     // Start is called before the first frame update
     void Start()
     {
         findknight = GameObject.FindGameObjectWithTag("Attack");
-        allieshpscript = findknight.GetComponent<allieshp>();
+        characterHealth = findknight.GetComponent<CharacterHealth>();
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class bulletScript : MonoBehaviour
         if (findknight == null)
         {
             findknight = GameObject.FindGameObjectWithTag("Attack");
-            allieshpscript = findknight.GetComponent<allieshp>();
+            characterHealth = findknight.GetComponent<CharacterHealth>();
             if (findknight == null )
             {
                 findknight = GameObject.FindGameObjectWithTag("Riot");
@@ -41,7 +41,9 @@ public class bulletScript : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Attack"))
         {
-            allieshpscript.knightHp = allieshpscript.knightHp - 10000;
+
+            characterHealth.TakeDamage(10000);
+            
             GameObject.Destroy(gameObject);
             
 

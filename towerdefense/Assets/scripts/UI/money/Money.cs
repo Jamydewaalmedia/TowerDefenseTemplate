@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class moneyscript : MonoBehaviour
+public class Money : MonoBehaviour
 {
 
 
@@ -16,12 +16,8 @@ public class moneyscript : MonoBehaviour
         text = TextMeshProUGUI.FindObjectOfType<TextMeshProUGUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void moneyfunction(int money)
+    
+    public void AddMoney(int money)
     {
         moneyCount = moneyCount + money;
 
