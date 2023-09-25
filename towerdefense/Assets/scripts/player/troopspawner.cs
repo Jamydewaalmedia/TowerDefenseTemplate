@@ -7,13 +7,13 @@ public class troopspawner : MonoBehaviour
 {
     public GameObject waypoint;
     [SerializeField] GameObject trooperprefab;
-    public TextMeshProUGUI text;
-    public bool canspawn;
+    
+    public bool canspawnknight;
     [SerializeField] private moneyscript moneyScript;
     // Start is called before the first frame update
     void Start()
     {
-        text = TextMeshProUGUI.FindObjectOfType<TextMeshProUGUI>();
+        
     }
 
     // Update is called once per frame
@@ -24,7 +24,7 @@ public class troopspawner : MonoBehaviour
     public void spawntroop()
     {
 
-        if (canspawn)
+        if (canspawnknight)
         {
             GameObject troopknight = Instantiate(trooperprefab);
             troopknight.transform.position = waypoint.transform.position;
@@ -33,7 +33,12 @@ public class troopspawner : MonoBehaviour
         if (moneyScript.moneyCount < 100)
         {
 
-            canspawn = false;
+            canspawnknight = false;
+        }
+        if (moneyScript.moneyCount >= 100)
+        {
+
+            canspawnknight = true;
         }
 
 

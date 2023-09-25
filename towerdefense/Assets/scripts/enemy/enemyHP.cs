@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyHP : MonoBehaviour
 {
     public int enemyHp;
-    private GameObject money;
+   
     
     
 
@@ -34,8 +34,9 @@ public class enemyHP : MonoBehaviour
                 GameObject doelObject = GameObject.Find("Money");
                 if (doelObject != null)
                 {
-                    doelObject.SendMessage("moneyfunction", +50);
+                    doelObject.SendMessage("moneyfunction", +150);
                 }
+                
 
                 GameObject.Destroy(gameObject);
 
@@ -45,6 +46,7 @@ public class enemyHP : MonoBehaviour
 
 
         }
+       
 
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class enemyknockback : MonoBehaviour
 {
     private Rigidbody2D rb2;
+    
+    
      
     // Start is called before the first frame update
     void Start()
@@ -24,7 +26,11 @@ public class enemyknockback : MonoBehaviour
             knockback(0.2f);
 
         }
+        if (col.gameObject.CompareTag("Riot"))
+        {
+            knockback(0.1f);
 
+        }
     }
     void knockback(float thrust)
     {

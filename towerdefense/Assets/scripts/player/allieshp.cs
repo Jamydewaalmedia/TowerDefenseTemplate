@@ -5,7 +5,7 @@ using UnityEngine;
 public class allieshp : MonoBehaviour
 {
     public GameObject findenemy;
-    public int knightHp = 100;
+    public int knightHp = 75;
     public bool movemnt;
     public GameObject bulletprefab;
     public GameObject findknight;
@@ -52,7 +52,7 @@ public class allieshp : MonoBehaviour
         //movemnt = false;
         if (col.gameObject.CompareTag("Enemy") )
         {
-            knightHp = knightHp - 10;
+            knightHp = knightHp - 25;
 
             
             movemnt = true;

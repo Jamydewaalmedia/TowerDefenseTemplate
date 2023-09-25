@@ -21,6 +21,16 @@ public class bulletScript : MonoBehaviour
         {
             findknight = GameObject.FindGameObjectWithTag("Attack");
             allieshpscript = findknight.GetComponent<allieshp>();
+            if (findknight == null )
+            {
+                findknight = GameObject.FindGameObjectWithTag("Riot");
+
+                if (findknight == null)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            
         }
 
         else
@@ -33,7 +43,7 @@ public class bulletScript : MonoBehaviour
         {
             allieshpscript.knightHp = allieshpscript.knightHp - 10000;
             GameObject.Destroy(gameObject);
-            Debug.Log("fuck this");
+            
 
         }
     }
