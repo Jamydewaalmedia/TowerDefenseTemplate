@@ -42,7 +42,7 @@ public class bulletScript : MonoBehaviour
         if (col.gameObject.CompareTag("Attack"))
         {
 
-            characterHealth.TakeDamage(10000);
+            characterHealth.TakeDamage(2000);
             
             GameObject.Destroy(gameObject);
             

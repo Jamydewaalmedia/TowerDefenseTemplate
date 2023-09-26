@@ -1150,6 +1150,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 128123591}
     m_Modifications:
+    - target: {fileID: 4305036622562584784, guid: f67af7731bb890f4aa14c518594ec482, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5356688107793770844, guid: f67af7731bb890f4aa14c518594ec482, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -1214,6 +1218,14 @@ PrefabInstance:
       propertyPath: waypoint
       value: 
       objectReference: {fileID: 4581748}
+    - target: {fileID: 8895913283882874642, guid: f67af7731bb890f4aa14c518594ec482, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8895913283882874642, guid: f67af7731bb890f4aa14c518594ec482, type: 3}
+      propertyPath: findenemytag
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1258869130020219281, guid: f67af7731bb890f4aa14c518594ec482, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f67af7731bb890f4aa14c518594ec482, type: 3}
@@ -1580,7 +1592,7 @@ GameObject:
   - component: {fileID: 1651489150}
   - component: {fileID: 1651489153}
   m_Layer: 0
-  m_Name: wall (2)
+  m_Name: enemyturret
   m_TagString: 1hit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1691,7 +1703,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38d8388e4760cb34badc871333a80236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
+  spawnrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
+  targetTag: Attack
 --- !u!1 &1688536462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +2217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 299329319402078368, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
+    - {fileID: 255732009157546569, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
 --- !u!4 &299329319483945378 stripped
 Transform:
@@ -2224,7 +2238,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  findenemy: {fileID: 0}
   BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
 --- !u!1001 &1164296128963929320
 PrefabInstance:

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BulletSpawner : MonoBehaviour
 {
-    public GameObject BulletPrefab;
+    public GameObject spawnrefab;
+    public string targetTag = "Attack";
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,10 @@ public class BulletSpawner : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Attack"))
+        if (collision.gameObject.CompareTag(targetTag))
         {
 
-            GameObject bullet = Instantiate(BulletPrefab);
+            GameObject bullet = Instantiate(spawnrefab);
             bullet.transform.position = transform.position;
 
 

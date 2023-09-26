@@ -13,6 +13,7 @@ public class enemyHP : MonoBehaviour
     private void Start()
     {
         money = FindAnyObjectByType<Money>();
+        
     }
 
     public void OnTriggerEnter2D(Collider2D col)

@@ -5,16 +5,34 @@ using UnityEngine;
 public class MoveToTarget : MonoBehaviour
 {
 
-    [SerializeField] GameObject target;
+     GameObject target;
     [SerializeField] float speed = 1;
+    public string targetTag = "Waypoint";
 
     private void Start()
     {
-        target = GameObject.FindGameObjectWithTag("Waypoint");
+        target = GameObject.FindGameObjectWithTag(targetTag);
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        if (target == null)
+        {
+
+            target = GameObject.FindGameObjectWithTag(targetTag);
+
+
+        }
+
+        else
+        {
+          
+
+                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+
+
+            
+        }
+
     }
 }
