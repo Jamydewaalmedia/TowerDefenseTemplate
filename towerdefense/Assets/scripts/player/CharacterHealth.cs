@@ -9,15 +9,20 @@ public class CharacterHealth : MonoBehaviour
     [SerializeField]  int currentHealth; // Current health points
     public GameObject BulletPrefab;
     private Money money;
-   
+    private PowerUpManager powerUpManager;
+    float activationChance = 0.25f; // Stel hier de gewenste kans in tussen 0 en 1 (bijvoorbeeld 0.25 voor 25% kans).
+
+
 
 
     // Start is called before the first frame update
     void Start()
     {
+        
         currentHealth = maxHealth; // Initialize current health
         
         money = FindAnyObjectByType<Money>();
+        powerUpManager = FindAnyObjectByType<PowerUpManager>();
     }
 
    
@@ -41,7 +46,20 @@ public class CharacterHealth : MonoBehaviour
         if (gameObject.CompareTag("Enemy"))
         {
             money.AddMoney(150);
+            float randomValue = Random.Range(0f, 1f);
             
+            
+            if (randomValue < activationChance)
+            {
+                Debug.Log(randomValue);
+                powerUpManager.ActivatePowerUp();
+            }
+
+
+
+
+
+
         }
 
         Destroy(gameObject);

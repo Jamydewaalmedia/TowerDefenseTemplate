@@ -5,9 +5,11 @@ using UnityEngine;
 public class enemyknockback : MonoBehaviour
 {
     private Rigidbody2D rb2;
-    
-    
-     
+    public string targetTag = "Attack";
+    public float knockbackAmounth = 0.1f;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,16 +23,12 @@ public class enemyknockback : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Attack"))
+        if (col.gameObject.CompareTag(targetTag))
         {
-            knockback(0.2f);
+            knockback(knockbackAmounth);
 
         }
-        if (col.gameObject.CompareTag("Riot"))
-        {
-            knockback(0.1f);
-
-        }
+       
     }
     void knockback(float thrust)
     {

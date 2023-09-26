@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7569165257086776855}
   - component: {fileID: 8895913283882874642}
   - component: {fileID: 7656586998081967715}
+  - component: {fileID: 5185427433698394056}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -128,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08761948de6012c4a95cca53ba063889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 1
+  speed: 0.3
+  targetTag: Waypoint
 --- !u!50 &5356688107793770851
 Rigidbody2D:
   serializedVersion: 4
@@ -163,6 +164,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fcaaf7655a41a458daa989b768218d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetTag: Attack
+  knockbackAmounth: 0.1
 --- !u!114 &8895913283882874642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +180,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
-  findenemy: {fileID: 0}
   BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
 --- !u!114 &7656586998081967715
 MonoBehaviour:
@@ -194,3 +196,17 @@ MonoBehaviour:
   characterHealth: {fileID: 8895913283882874642}
   targetTag: Attack
   damageAmount: 25
+--- !u!114 &5185427433698394056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356688107793770845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fcaaf7655a41a458daa989b768218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Riot
+  knockbackAmounth: 0.09
