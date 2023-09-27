@@ -10,12 +10,9 @@ public class CharacterHealth : MonoBehaviour
     public GameObject BulletPrefab;
     private Money money;
     private PowerUpManager powerUpManager;
-    float activationChance = 0.25f; // Stel hier de gewenste kans in tussen 0 en 1 (bijvoorbeeld 0.25 voor 25% kans).
+    [SerializeField]float activationChance = 0.25f; // Stel hier de gewenste kans in tussen 0 en 1 (bijvoorbeeld 0.25 voor 25% kans).
 
-
-
-
-    // Start is called before the first frame update
+   
     void Start()
     {
         
@@ -24,10 +21,6 @@ public class CharacterHealth : MonoBehaviour
         money = FindAnyObjectByType<Money>();
         powerUpManager = FindAnyObjectByType<PowerUpManager>();
     }
-
-   
-   
-      
 
     // Method to apply damage to the character
     public void TakeDamage(int damage)
@@ -39,27 +32,19 @@ public class CharacterHealth : MonoBehaviour
             HandleDeath(); // Handle character death
         }
     }
-
     // Customize this method for specific behavior upon character death
     private void HandleDeath()
     {
         if (gameObject.CompareTag("Enemy"))
         {
             money.AddMoney(150);
+
             float randomValue = Random.Range(0f, 1f);
-            
             
             if (randomValue < activationChance)
             {
-                Debug.Log(randomValue);
                 powerUpManager.ActivatePowerUp();
             }
-
-
-
-
-
-
         }
 
         Destroy(gameObject);

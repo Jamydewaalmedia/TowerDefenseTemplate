@@ -48,6 +48,16 @@ public class bulletScript : MonoBehaviour
             
 
         }
+
+        if (col.gameObject.CompareTag("Riot"))
+        {
+
+            characterHealth.TakeDamage(2000);
+
+            GameObject.Destroy(gameObject);
+
+
+        }
     }
 
 }
