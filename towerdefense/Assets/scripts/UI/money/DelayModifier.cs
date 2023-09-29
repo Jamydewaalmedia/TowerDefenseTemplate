@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class DelayModifier : MonoBehaviour
 
     public float InitialDelay = 1.0f; // The initial delay between spawns
     public float delayprecentage;
+    private float MinDelay = 0.3f;
 
     private void Start()
     {
@@ -25,8 +27,13 @@ public class DelayModifier : MonoBehaviour
 
     public void ModifyDelayByPercentage(float percentage)
     {
-        float reductionAmount = delay * (percentage / 100.0f); // Calculate the reduction based on the given percentage
-        delay -= reductionAmount; // Reduce the delay by the calculated amount
+        if (delay > MinDelay)
+        {
+            float reductionAmount = delay * (percentage / 100.0f); // Calculate the reduction based on the given percentage
+            delay -= reductionAmount; // Reduce the delay by the calculated amount
+        }
+        
+
     }
 
     public float GetCurrentDelay()

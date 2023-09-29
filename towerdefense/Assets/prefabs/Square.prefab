@@ -151,6 +151,7 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   BulletPrefab: {fileID: 8235895966248660654, guid: 284af4a761d40274ba595ebc5c1c67b2, type: 3}
+  activationChance: 0.08
 --- !u!114 &1305919307082004194
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class CharacterHealth : MonoBehaviour
     {
         if (gameObject.CompareTag("Enemy"))
         {
-            money.AddMoney(150);
+            money.AddMoney(75);
 
             float randomValue = Random.Range(0f, 1f);
             

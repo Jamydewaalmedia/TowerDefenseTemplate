@@ -16,8 +16,7 @@ public class Money : MonoBehaviour
         text = TextMeshProUGUI.FindObjectOfType<TextMeshProUGUI>();
         text.text = "money : " + moneyCount;
     }
-
-    
+  
     public void AddMoney(int money)
     {
         moneyCount = moneyCount + money;

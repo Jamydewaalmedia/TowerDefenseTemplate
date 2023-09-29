@@ -13,7 +13,6 @@ public class Stopwatch : MonoBehaviour
         StartStopwatch(); 
     }
 
-    
     void Update()
     {
         if (stopwatchActief)
@@ -26,7 +25,6 @@ public class Stopwatch : MonoBehaviour
         huidigeTijdTekst.text = geformatteerdeTijd; // We tonen de geformatteerde tijd in de UI Tekst component
     }
 
-   
     public void StartStopwatch()
     {
         stopwatchActief = true; 
@@ -37,7 +35,7 @@ public class Stopwatch : MonoBehaviour
     {
         int seconden = Mathf.FloorToInt(tijdInSeconden); // We ronden de tijd naar beneden af naar de dichtstbijzijnde gehele seconde
 
-        int minDigits = Mathf.Max(2, Mathf.FloorToInt(Mathf.Log10(seconden) + 1)); // We berekenen het minimum aantal cijfers dat nodig is om seconden weer te geven (note to me probeer niet Logaritme  te begrijpen hz is de uitleg zo ingewikkeld voor no reason    )
+        int minDigits = Mathf.Max(2, Mathf.FloorToInt(Mathf.Log10(seconden) + 1)); // We berekenen het minimum aantal cijfers dat nodig is om seconden weer te geven (note to me probeer niet Logaritme  te begrijpen hz is de uitleg zo ingewikkeld voor no reason )
         return seconden.ToString($"D{minDigits}");  
     }
 }

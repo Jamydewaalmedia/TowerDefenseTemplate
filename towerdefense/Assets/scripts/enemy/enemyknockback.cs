@@ -6,6 +6,7 @@ public class enemyknockback : MonoBehaviour
 {
     private Rigidbody2D rb2;
     public string targetTag = "Attack";
+   
     public float knockbackAmounth = 0.1f;
 
 
@@ -26,12 +27,11 @@ public class enemyknockback : MonoBehaviour
         if (col.gameObject.CompareTag(targetTag))
         {
             knockback(knockbackAmounth);
-
         }
-       
     }
-    void knockback(float thrust)
+    void knockback( float thrust)
     {
         rb2.AddForce(Vector2.right * thrust);
     }
+
 }

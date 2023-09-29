@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7141745766424271924}
   - component: {fileID: 7844155970986625315}
   - component: {fileID: -2579208369348997496}
+  - component: {fileID: 6790734535875039047}
   m_Layer: 0
   m_Name: Riot
   m_TagString: Riot
@@ -151,6 +152,7 @@ MonoBehaviour:
   maxHealth: 400
   currentHealth: 0
   BulletPrefab: {fileID: 0}
+  activationChance: 0.08
 --- !u!114 &7844155970986625315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08761948de6012c4a95cca53ba063889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.085
+  speed: 0.2
   targetTag: Enemy
 --- !u!114 &-2579208369348997496
 MonoBehaviour:
@@ -180,3 +182,17 @@ MonoBehaviour:
   characterHealth: {fileID: 7141745766424271924}
   targetTag: Enemy
   damageAmount: 25
+--- !u!114 &6790734535875039047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141745766424271929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fcaaf7655a41a458daa989b768218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Border
+  knockbackAmounth: 0.01

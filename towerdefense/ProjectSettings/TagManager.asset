@@ -12,6 +12,7 @@ TagManager:
   - bullet
   - waypointenemy
   - Riot
+  - Border
   layers:
   - Default
   - TransparentFX
