@@ -517,13 +517,13 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 394561676}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.3970828, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -534,7 +534,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.7941656, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &523127104
 GameObject:
@@ -752,6 +752,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600583053}
   m_CullTransparentMesh: 1
+--- !u!1 &658368602
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658368603}
+  - component: {fileID: 658368604}
+  m_Layer: 0
+  m_Name: Scenechanger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &658368603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658368602}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8892777, y: 0.3671586, z: 0.026936874}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &658368604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658368602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7b4287993ebdb4cadbb9726b237d4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &674482056
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d902881c3e8244dbdcdb3bdadc34c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthbar: {fileID: 0}
+  Scenechangers: {fileID: 0}
+  healthbar: {fileID: 1317943046}
   HealthAmount: 100
 --- !u!1 &809288066
 GameObject:
@@ -2640,6 +2685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 299329319402078557, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 299329319402078559, guid: ce97f63d5e376c34bbb282c027b67765, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2825,6 +2874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5369165501282352568, guid: c560950027aad154a9e6caa2d04972cb, type: 3}
+      propertyPath: m_TagString
+      value: Base
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c560950027aad154a9e6caa2d04972cb, type: 3}
 --- !u!4 &2573773193181232030 stripped
@@ -2832,6 +2885,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1971756980269735483, guid: c560950027aad154a9e6caa2d04972cb, type: 3}
   m_PrefabInstance: {fileID: 2573773193181232029}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2573773193181232032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394561676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f02913acb0747943bad333496516ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthManager: {fileID: 0}
+  targetTag: Enemy
+  testcooldown: 0
 --- !u!1001 &2944794723835371886
 PrefabInstance:
   m_ObjectHideFlags: 0

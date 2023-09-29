@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7442582938666989110}
   - component: {fileID: 6905493767184348816}
   - component: {fileID: 2177777449146482790}
+  - component: {fileID: 8876148840953140463}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -130,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08761948de6012c4a95cca53ba063889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 0.9
   targetTag: Waypoint
 --- !u!50 &5356688107793770851
 Rigidbody2D:
@@ -227,3 +228,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Riot
   knockbackAmounth: 0.01
+--- !u!114 &8876148840953140463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356688107793770845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fcaaf7655a41a458daa989b768218d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Base
+  knockbackAmounth: 0.1

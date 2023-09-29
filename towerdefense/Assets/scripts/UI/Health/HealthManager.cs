@@ -6,12 +6,13 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-
+    public menu Scenechangers;
     public Image healthbar;
     public float HealthAmount = 100f ;
     void Start()
     {
-        
+       
+         Scenechangers = GameObject.Find("Scenechanger").GetComponent<menu>();
     }
 
     
@@ -20,6 +21,10 @@ public class HealthManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return)) 
         {
             TakeDamage(20f);
+        }
+        if(healthbar.fillAmount <= 0) 
+        {
+            Scenechangers.scenechanger("GameOver");
         }
         
     }
