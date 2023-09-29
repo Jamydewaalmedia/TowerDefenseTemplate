@@ -11,8 +11,9 @@ public class CharacterHealth : MonoBehaviour
     private Money money;
     private PowerUpManager powerUpManager;
     [SerializeField]float activationChance = 0.25f; // Stel hier de gewenste kans in tussen 0 en 1 (bijvoorbeeld 0.25 voor 25% kans).
+    public string targetTag = "Enemy";
 
-   
+
     void Start()
     {
         
@@ -35,7 +36,7 @@ public class CharacterHealth : MonoBehaviour
     // Customize this method for specific behavior upon character death
     private void HandleDeath()
     {
-        if (gameObject.CompareTag("Enemy"))
+        if (gameObject.CompareTag(targetTag))
         {
             money.AddMoney(75);
 

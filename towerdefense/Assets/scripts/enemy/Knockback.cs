@@ -2,14 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyknockback : MonoBehaviour
+public class Knockback : MonoBehaviour
 {
     private Rigidbody2D rb2;
-    public string targetTag = "Attack";
-   
+    public string[] targetTags;
     public float knockbackAmounth = 0.1f;
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +21,14 @@ public class enemyknockback : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag(targetTag))
+        foreach(string tag in targetTags)
         {
-            knockback(knockbackAmounth);
+            if (col.gameObject.CompareTag(tag))
+            {
+                knockback(knockbackAmounth);
+            }
         }
+      
     }
     void knockback( float thrust)
     {
