@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08761948de6012c4a95cca53ba063889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.9
+  speed: 0.2
   targetTag: Waypoint
 --- !u!50 &5356688107793770851
 Rigidbody2D:

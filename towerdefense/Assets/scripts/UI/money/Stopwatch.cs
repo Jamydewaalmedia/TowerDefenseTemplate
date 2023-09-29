@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,7 +6,7 @@ public class Stopwatch : MonoBehaviour
 {
     bool stopwatchActief = false; 
     public float huidigeTijd; 
-    public Text huidigeTijdTekst; 
+    public TextMeshProUGUI huidigeTijdTekst; 
     
     void Start()
     {
