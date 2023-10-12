@@ -8,7 +8,7 @@ public class DelayModifier : MonoBehaviour
 
     public float InitialDelay = 1.0f; // The initial delay between spawns
     public float delayprecentage;
-    private float MinDelay = 0.3f;
+    public float MinDelay = 0.3f;
 
     private void Start()
     {

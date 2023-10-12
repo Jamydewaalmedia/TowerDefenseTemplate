@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 5356688107793770851}
   - component: {fileID: 8895913283882874642}
   - component: {fileID: 7656586998081967715}
-  - component: {fileID: 7442582938666989110}
+  - component: {fileID: 881531530709424517}
   - component: {fileID: 6905493767184348816}
+  - component: {fileID: 6579290592399623056}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Enemy
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 5356688107793770845}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.49, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 2007575932, guid: 365b2e13feab40b45b6e6333ac1e8a16, type: 3}
   m_Color: {r: 1, g: 0.0603773, b: 0.0603773, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,18 +105,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.001998663, y: 0.0019987375}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.42, y: 0.42}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.42035675, y: 0.42035672}
   m_EdgeRadius: 0
 --- !u!114 &5356688107793770848
 MonoBehaviour:
@@ -182,9 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterHealth: {fileID: 8895913283882874642}
-  targetTag: Attack
+  targetTags:
+  - Attack
   damageAmount: 25
---- !u!114 &7442582938666989110
+--- !u!114 &881531530709424517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,8 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4a18778a46b3340afe3eab112f9b92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterHealth: {fileID: 0}
-  targetTag: Riot
+  characterHealth: {fileID: 8895913283882874642}
+  targetTags:
+  - Riot
   damageAmount: 10
 --- !u!114 &6905493767184348816
 MonoBehaviour:
@@ -216,3 +219,20 @@ MonoBehaviour:
   - Base
   - Riot
   knockbackAmounth: 0.1
+--- !u!114 &6579290592399623056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5356688107793770845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec1f8a44c218754797cdcfeab426ba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitparticle: {fileID: 0}
+  targetTags:
+  - Attack
+  - Riot
+  particlesystem: hitparticlessystem

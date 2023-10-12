@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,13 +8,16 @@ public class Spawner : MonoBehaviour
     public Transform spawnPoint; // The point where the prefab will spawn
     public int spawnCost = 100; // The cost to spawn the prefab
     public Money Money; // Reference to your money script
+    public bool cooldown = true;
 
     private bool canSpawn; // A flag to check if spawning is allowed
 
     private void Start()
     {
-        
+
+        cooldown = true;
         canSpawn = Money.moneyCount >= spawnCost;
+
     }
 
     private void Update()
@@ -31,15 +35,33 @@ public class Spawner : MonoBehaviour
  
     }
 
+  
     public void SpawnObject()
     {
         if (canSpawn)
         {  
-            Money.AddMoney(-spawnCost);
+            if(cooldown)
+            {
+                Money.AddMoney(-spawnCost);
 
-            // Spawn the prefab at the specified position
-            Instantiate(spawnPrefab, spawnPoint.position, Quaternion.identity);
+                // Spawn the prefab at the specified position
+                Instantiate(spawnPrefab, spawnPoint.position, Quaternion.identity);
+                cooldown = false;
+                Invoke(nameof(cooldownshit), 3f);
+            }
+
+
         }
      
     }
+    public void cooldownshit()
+    {
+
+        cooldown = true;
+
+
+
+    }
+
+
 }

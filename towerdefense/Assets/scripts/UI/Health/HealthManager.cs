@@ -9,10 +9,12 @@ public class HealthManager : MonoBehaviour
     public menu Scenechangers;
     public Image healthbar;
     public float HealthAmount = 100f ;
+    private ActivateParticle activateParticle;
     void Start()
     {
        
          Scenechangers = GameObject.Find("Scenechanger").GetComponent<menu>();
+         activateParticle = FindAnyObjectByType<ActivateParticle>();
     }
 
     
@@ -32,6 +34,7 @@ public class HealthManager : MonoBehaviour
     {
         HealthAmount -= Damage;
         healthbar.fillAmount = HealthAmount / 100f;
+       
 
 
     }

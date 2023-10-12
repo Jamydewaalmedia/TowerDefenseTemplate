@@ -6,7 +6,7 @@ public class CharacterDamage : MonoBehaviour
 {
     // Start is called before the first frame update
     public CharacterHealth characterHealth;
-    public string targetTag = "Enemy";
+    public string[] targetTags;
     public int damageAmount = 25;
 
     private void Start()
@@ -18,11 +18,14 @@ public class CharacterDamage : MonoBehaviour
 
 
         //movemnt = false;
-        if (col.gameObject.CompareTag(targetTag))
+
+        foreach (string tag in targetTags)
         {
-            characterHealth.TakeDamage(damageAmount);
+            if (col.gameObject.CompareTag(tag))
+            {
+                characterHealth.TakeDamage(damageAmount);
+            }
 
         }
-       
     }
 }
