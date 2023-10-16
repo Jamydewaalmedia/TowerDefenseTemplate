@@ -3,9 +3,13 @@ Dit is een template wat door jullie te gebruiken is voor het juist inleveren van
 
 Mijn tower defense-game is een eenvoudige top-down strategiegame waarin spelers geld gebruiken om troepen in te huren en verschillende torens te bouwen om eindeloze golven van vijanden te stoppen voordat ze de kern van hun basis kunnen bereiken. Spelers moeten hun middelen verstandig beheren en strategisch nadenken om te overleven in dit spannende spel. De game biedt zowel uitdaging als plezier voor alle soorten spelers.
 
-![thumbnail of my game](readmeVisuals/thumbnailgame.png)
+<div style="display:flex;">
+    <img alt="thumbnail of my game" style="width:50%;" src="readmeVisuals/thumbnailgame.png"/>
+    <img alt="sprite scheet of main red enemy" src="readmeVisuals/spritesheetenemy.png"/>
+</div>
 
-![sprite scheet of main red enemy ](readmeVisuals/spritesheetenemy.png)
+
+
 
 
 ## Product 1: "DRY SRP Scripts op GitHub"
