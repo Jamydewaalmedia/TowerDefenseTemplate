@@ -5,7 +5,7 @@ Mijn tower defense-game is een eenvoudige top-down strategiegame waarin spelers 
 
 ![thumbnail of my game](readmeVisuals/thumbnailgame.png)
 
-![also not](https://cdn.akamai.steamstatic.com/steam/apps/960090/ss_900d7c00d45ff2a258d4c8d59ee47f7f04854c37.600x338.jpg?t=1686097340)
+![sprite scheet of main red enemy ](readmeVisuals/spritesheetenemy.png)
 
 
 ## Product 1: "DRY SRP Scripts op GitHub"
