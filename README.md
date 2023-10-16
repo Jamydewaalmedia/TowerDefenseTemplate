@@ -8,7 +8,7 @@ Mijn tower defense-game is een eenvoudige top-down strategiegame waarin spelers 
     <img alt="sprite scheet of main red enemy" src="readmeVisuals/spritesheetenemy.png"/>
 </div>
 
-
+![thumbnail of my game](readmeVisuals/screenschotgame.JPG)
 
 
 
