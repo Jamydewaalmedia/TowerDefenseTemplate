@@ -47,14 +47,14 @@ public class Spawner : MonoBehaviour
                 // Spawn the prefab at the specified position
                 Instantiate(spawnPrefab, spawnPoint.position, Quaternion.identity);
                 cooldown = false;
-                Invoke(nameof(cooldownshit), 3f);
+                Invoke(nameof(cooldown2), 3f);
             }
 
 
         }
      
     }
-    public void cooldownshit()
+    public void cooldown2()
     {
 
         cooldown = true;
