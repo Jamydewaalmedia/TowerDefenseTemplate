@@ -1,9 +1,7 @@
 # TowerDefenseTemplate
-Dit is een template wat door jullie te gebruiken is voor het juist inleveren van alle producten voor de Towerdefense beroepsopdracht. **Verwijder uiteindelijk de template teksten!**
+Mijn tower defense-game is een eenvoudige top-down strategiegame waarin spelers geld gebruiken om troepen in te huren en verschillende torens te bouwen om eindeloze golven van vijanden te stoppen voordat ze de kern van hun basis kunnen bereiken. Spelers moeten hun middelen verstandig beheren en strategisch nadenken om te overleven in dit spannende spel. De game biedt zowel uitdaging als plezier voor alle soorten spelers.
 
-Begin met een korte omschrijving van je towerdefense game en hoe deze werkt. Plaats ook een paar screenshots.
-
-![not really my game](https://cdn.akamai.steamstatic.com/steam/apps/246420/ss_aaaf33cdb9106bd0801a36049516d95c6f2352b0.600x338.jpg?t=1686321490)
+![Textures Sprites](readmeVisuals/thumbnailgame.png)
 
 ![also not](https://cdn.akamai.steamstatic.com/steam/apps/960090/ss_900d7c00d45ff2a258d4c8d59ee47f7f04854c37.600x338.jpg?t=1686097340)
 
