@@ -17,16 +17,17 @@ Mijn tower defense-game is een eenvoudige top-down strategiegame waarin spelers 
 Plaats hier minimaal 1 link naar scripts die voldoen aan de eisen van **"Don't Repeat Yourself (DRY)"** en **"Single Responsibility Principle"**.
 Omschrijf hier waarom jij denkt dat je in die scripts aan deze eisen voldoet.
 
-Bijvoorbeeld:
 
-*"In dit script heb ik een array gebruikt voor al mijn vijanden die in de nieuwe wave worden gespawnd. Hierdoor heb ik mijzelf niet hoeven herhalen **(DRY)** in de code omdat ik met 1 regel alle enemies kan plaatsen via en for each loop.
-[link naar script](/MyTowerDefenseGame/Assets/Scripts/JustAScript.cs)"*
+
+In dit script heb ik een array genaamd targetTags gebruikt om de tags van de objecten te specificeren waartegen ik knockback wil toepassen. Deze aanpak minimaliseert herhaling van code (DRY-principe) omdat ik met een enkele for-each loop door alle doelobjecten kan gaan en knockback kan toepassen. Hierdoor hoef ik niet dezelfde code te herhalen voor elk type vijand, wat de code efficienter en onderhoudbaar maakt.
+[link naar script](/towerdefense\Assets\scripts\enemy/Knockback.cs)"*
+
 
 ## Product 2: "Projectmappen op GitHub"
 
 Je commit de mappenstructuur van je unity project op github en verwijst vanuit je readme naar de root map van je project. Met een netjes en goed gestructureerde mappenstructuur en benamingen van files toon je aan dat je dit leerdoel beheerst. 
 
-Dit is de [ROOT](/MyTowerDefenseGame/) folder van mijn unity project.
+Dit is de [ROOT](/towerdefense/) folder van mijn unity project.
 
 Zorg dat deze verwijst naar je Develop branch.
 
