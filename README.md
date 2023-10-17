@@ -20,7 +20,7 @@ Omschrijf hier waarom jij denkt dat je in die scripts aan deze eisen voldoet.
 
 
 In dit script heb ik een array genaamd targetTags gebruikt om de tags van de objecten te specificeren waartegen ik knockback wil toepassen. Deze aanpak minimaliseert herhaling van code (DRY-principe) omdat ik met een enkele for-each loop door alle doelobjecten kan gaan en knockback kan toepassen. Hierdoor hoef ik niet dezelfde code te herhalen voor elk type vijand, wat de code efficienter en onderhoudbaar maakt.
-[link naar script](/towerdefense\Assets\scripts\enemy/Knockback.cs)"*
+[link naar script](/towerdefense/Assets/scripts/enemy/Knockback.cs)"*
 
 
 ## Product 2: "Projectmappen op GitHub"
