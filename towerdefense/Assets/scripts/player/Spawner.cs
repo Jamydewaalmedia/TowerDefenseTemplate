@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
     public int spawnCost = 100; // The cost to spawn the prefab
     public Money Money; // Reference to your money script
     public bool cooldown = true;
+    public float cooldownvalue;
 
     private bool canSpawn; // A flag to check if spawning is allowed
 
@@ -47,7 +48,7 @@ public class Spawner : MonoBehaviour
                 // Spawn the prefab at the specified position
                 Instantiate(spawnPrefab, spawnPoint.position, Quaternion.identity);
                 cooldown = false;
-                Invoke(nameof(cooldown2), 3f);
+                Invoke(nameof(cooldown2), cooldownvalue);
             }
 
 
