@@ -14,13 +14,13 @@ public class Money : MonoBehaviour
     void Start()
     {
        
-        text.text = "money : " + moneyCount;
+        text.text = " " + moneyCount;
     }
   
     public void AddMoney(int money)
     {
         moneyCount = moneyCount + money;
 
-        text.text = "money : " + moneyCount;
+        text.text = " " + moneyCount;
     }
 }
