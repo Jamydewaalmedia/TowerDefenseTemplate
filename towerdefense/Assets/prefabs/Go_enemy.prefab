@@ -233,7 +233,7 @@ MonoBehaviour:
   characterHealth: {fileID: 3217142462621071934}
   targetTags:
   - Riot
-  damageAmount: 10
+  damageAmount: 5
 --- !u!114 &577597677482326972
 MonoBehaviour:
   m_ObjectHideFlags: 0
