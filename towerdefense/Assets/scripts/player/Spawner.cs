@@ -17,7 +17,8 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        visualCoolDown = GameObject.FindGameObjectWithTag("fillImage").GetComponent<VisualCoolDown>();
+     
+       // visualCoolDown = GetComponent<VisualCoolDown>();
         cooldown = true;
         canSpawn = Money.moneyCount >= spawnCost;
 

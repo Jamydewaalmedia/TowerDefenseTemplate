@@ -13,7 +13,7 @@ public class VisualCoolDown : MonoBehaviour
     void Start()
     {
         image= GetComponent<Image>();
-        spawner= GameObject.Find("spawner").GetComponent<Spawner>();
+        spawner = GetComponent<Spawner>();
         
     }
 
