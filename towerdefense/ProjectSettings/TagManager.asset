@@ -14,6 +14,7 @@ TagManager:
   - Riot
   - Border
   - Base
+  - fillImage
   layers:
   - Default
   - TransparentFX

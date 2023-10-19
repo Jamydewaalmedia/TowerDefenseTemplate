@@ -5,13 +5,16 @@ using UnityEngine.UI;
 public class VisualCoolDown : MonoBehaviour
 {
     public Image image;
-    public float cooldownTime = 3.8f;
     private float currentTime = 0f;
     private bool isCoolingDown = false;
+    private GameObject spawnerobject;
+    public Spawner spawner;
 
     void Start()
     {
-        image.fillAmount = 0;
+        image= GetComponent<Image>();
+        spawner = GetComponent<Spawner>();
+        
     }
 
     void Update()
@@ -19,10 +22,11 @@ public class VisualCoolDown : MonoBehaviour
         if (isCoolingDown)
         {
             currentTime += Time.deltaTime;
-            float fillValue = Mathf.Clamp01(currentTime / cooldownTime);
-            image.fillAmount = 1 - fillValue; // Reverse fill direction
-            if (currentTime >= cooldownTime)
+            float fillValue = Mathf.Clamp01(currentTime / spawner.cooldownvalue);
+            image.fillAmount = 1 - fillValue; 
+            if (currentTime >= spawner.cooldownvalue)
             {
+
                 isCoolingDown = false;
                 currentTime = 0f;
             }
