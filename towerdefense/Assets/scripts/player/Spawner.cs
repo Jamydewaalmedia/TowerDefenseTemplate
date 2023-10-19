@@ -10,12 +10,13 @@ public class Spawner : MonoBehaviour
     public Money Money; // Reference to your money script
     public bool cooldown = true;
     public float cooldownvalue;
+    public VisualCoolDown visualCoolDown;
 
     private bool canSpawn; // A flag to check if spawning is allowed
 
     private void Start()
     {
-
+        
         cooldown = true;
         canSpawn = Money.moneyCount >= spawnCost;
 
@@ -43,11 +44,13 @@ public class Spawner : MonoBehaviour
         {  
             if(cooldown)
             {
+
                 Money.AddMoney(-spawnCost);
 
                 // Spawn the prefab at the specified position
                 Instantiate(spawnPrefab, spawnPoint.position, Quaternion.identity);
                 cooldown = false;
+                
                 Invoke(nameof(cooldown2), cooldownvalue);
             }
 
