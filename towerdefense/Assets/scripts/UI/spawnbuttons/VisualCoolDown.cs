@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class VisualCoolDown : MonoBehaviour
 {
     public Image image;
-   
     private float currentTime = 0f;
     private bool isCoolingDown = false;
     private GameObject spawnerobject;
@@ -13,8 +12,9 @@ public class VisualCoolDown : MonoBehaviour
 
     void Start()
     {
-        spawner= GetComponent<Spawner>();
-        image.fillAmount = 0;
+        image= GetComponent<Image>();
+        spawner= GameObject.Find("spawner").GetComponent<Spawner>();
+        
     }
 
     void Update()
