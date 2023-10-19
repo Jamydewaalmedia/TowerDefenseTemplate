@@ -5962,7 +5962,7 @@ MonoBehaviour:
   Money: {fileID: 1931769882}
   cooldown: 0
   cooldownvalue: 6
-  visualCoolDown: {fileID: 0}
+  visualCoolDown: {fileID: 1027154510}
 --- !u!1 &544935936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6544,6 +6544,7 @@ GameObject:
   - component: {fileID: 1027154506}
   - component: {fileID: 1027154509}
   - component: {fileID: 1027154508}
+  - component: {fileID: 1027154510}
   m_Layer: 5
   m_Name: riotimage
   m_TagString: Untagged
@@ -6609,6 +6610,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027154505}
   m_CullTransparentMesh: 1
+--- !u!114 &1027154510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027154505}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a0bdd37d754984082fd7b21392d69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1027154508}
+  spawner: {fileID: 523127106}
 --- !u!1 &1041277329
 GameObject:
   m_ObjectHideFlags: 0
@@ -17675,13 +17690,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1503252214}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79a0bdd37d754984082fd7b21392d69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  image: {fileID: 0}
-  spawner: {fileID: 0}
+  image: {fileID: 1503252216}
+  spawner: {fileID: 128123592}
 --- !u!4 &1516138027 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8677674391806099892, guid: 3d3a5db4953e8eb4e9ac127171114d15, type: 3}
