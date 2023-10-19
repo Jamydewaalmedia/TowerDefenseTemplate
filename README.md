@@ -43,7 +43,7 @@ De build van je game bevat textures, sprites en sprite animations(bijv particles
 
 Plaats in je readme een animated gif van je gameplay (+- 10 sec.) waarin de implementatie van je textures en sprites goed te zien is.
 
-![Textures Sprites](readmeVisuals/texturesSprites.gif)
+![Textures Sprites](readmeVisuals/towerdefense.gif)
 
 ## Product 5: Issues met debug screenshots op GitHub 
 
