@@ -7,7 +7,6 @@ public class PowerUpExplosion : MonoBehaviour
 {
     private GameObject[] enemies;
     public string targetTag = "Enemy";
-    private ActivateParticle activateParticle;
     public string particlesystem = "nukeparticlesystem";
     public ParticleSystem hitparticle;
     public string explosion = "explosion";
@@ -16,7 +15,7 @@ public class PowerUpExplosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Assign the result of FindGameObjectsWithTag to the class-level enemies array.
+     
         
         hitparticle = GameObject.Find(particlesystem).GetComponent<ParticleSystem>();
 
@@ -31,13 +30,20 @@ public class PowerUpExplosion : MonoBehaviour
 
     private void OnMouseDown()
     {
+
+        nukebehavour();
+       
+
         
-        // Check if enemies array is not null before attempting to destroy enemies.
+        
+    }
+    public void nukebehavour()
+    {
         if (enemies != null)
         {
             foreach (GameObject enemy in enemies)
             {
-                
+
                 hitparticle.Play();
                 Destroy(enemy);
             }
@@ -45,7 +51,7 @@ public class PowerUpExplosion : MonoBehaviour
         }
         explosionsound.PlayOneShot(explosionsound.clip);
 
-        // Destroy the GameObject this script is attached to.
+
         Destroy(gameObject);
     }
 }
