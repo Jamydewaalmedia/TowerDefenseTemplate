@@ -17,7 +17,7 @@ In dit script heb ik een array genaamd targetTags gebruikt om de tags van de obj
 [link naar script](/towerdefense/Assets/scripts/enemy/Knockback.cs)"*
 
 voor srp heb ik een menu script
-een simpele script die een functie heeft die de scene veranderd ik zoe deze script op verschillende manieren kunnen gebruiken voor pauze of als je dood zou gaan dat het level weer opnieuw gestart word.
+een simpele script die een functie heeft die de scene veranderd ik zou deze script op verschillende manieren kunnen gebruiken voor pauze of als je dood zou gaan dat het level weer opnieuw gestart word.
 [link naar script](/towerdefense/Assets/scripts/UI/menu.cs)"*
 
 
