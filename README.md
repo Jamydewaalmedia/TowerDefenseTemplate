@@ -24,7 +24,6 @@ een simpele script die een functie heeft die de scene veranderd ik zou deze scri
 ## Product 2: "Projectmappen op GitHub"
 Dit is de [ROOT](/towerdefense/) folder van mijn unity project.
 
-Zorg dat deze verwijst naar je Develop branch.
 
 ## Product 3: Build op Github
 
@@ -47,7 +46,7 @@ Zorg dat deze verwijst naar je Develop branch.
 
 *  **Je game bevat torens die kunnen mikken en schieten op een bewegend doel.** 
 
-*mijn torens zijn units die enemies aan vallen wanneer ze in een collide met elkaar ze worden ingespawned met een knop*
+*mijn torens zijn units die enemies aan vallen wanneer ze  collide met elkaar. ze worden ingespawned met een knop*
 
 *  **Je game bevat vernietigbare vijanden die 1 of meerderen paden kunnen volgen.**  
 
@@ -55,7 +54,7 @@ Zorg dat deze verwijst naar je Develop branch.
 
 *  **Je game bevat een “wave” systeem waarmee er onder bepaalde voorwaarden (tijd/vijanden op) nieuwe waves met vijanden het veld in komen.**
 
-*mijn enemies worden gespawned met een interval van 10 seconds maar er zit een delaydevider die de 10 seconde steeds kleiner maakt door tedelen door een megeven getal*
+*mijn enemies worden gespawned met een interval van 10 seconde maar er zit een delaydevider die de 10 seconde steeds kleiner maakt door tedelen door een megeven getal*
 
 *  **Een “health” systeem waarmee je levens kunt verliezen als vijanden hun doel bereiken en zodoende het spel kunt verliezen.** 
 
