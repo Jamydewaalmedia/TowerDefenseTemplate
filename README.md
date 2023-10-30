@@ -22,7 +22,7 @@ een simpele script die een functie heeft die de scene veranderd ik zou deze scri
 
 
 ## Product 2: "Projectmappen op GitHub"
-Dit is de [ROOT](/towerdefense/) folder van mijn unity project.
+Dit is de [ROOT](https://github.com/Jamydewaalmedia/TowerDefenseTemplate/tree/develop) folder van mijn unity project.
 
 
 ## Product 3: Build op Github
