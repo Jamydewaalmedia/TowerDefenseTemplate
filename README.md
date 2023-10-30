@@ -35,10 +35,9 @@ Zorg dat deze verwijst naar je Develop branch.
 
 ## Product 6: Game design met onderbouwing 
 
-Je gebruikt een game design tool om je game design vast te leggen en te communiceren. Daarnaast onderbouw je de design keuzes ten aanzien van “playability” en “replayability” voor je game schriftelijk. 
 
-Voorbeeld van een one page design:
 ![one page](readmeVisuals/onepage.png)
+
 
 
 
@@ -68,7 +67,7 @@ Voorbeeld van een one page design:
 
 
 
-## Product 7: Class Diagram voor volledige codebase (moet nog)
+## Product 7: Class Diagram voor volledige codebase 
 
  [![classdiagram depend](readmeVisuals/classdiagramone.png)]
  [![classdiagram depend](readmeVisuals/classdiagramtwo.png)]
