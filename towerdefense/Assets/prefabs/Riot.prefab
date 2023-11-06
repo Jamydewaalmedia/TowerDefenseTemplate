@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08761948de6012c4a95cca53ba063889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
+  speed: 0.35
   targetTag: Enemy
 --- !u!114 &-2579208369348997496
 MonoBehaviour:
@@ -196,5 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15fcaaf7655a41a458daa989b768218d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTags: []
+  targetTags:
+  - Enemy
   knockbackAmounth: 0.01

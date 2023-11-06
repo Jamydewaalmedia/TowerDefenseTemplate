@@ -16,6 +16,11 @@ public class MoveToTarget : MonoBehaviour
 
     void Update()
     {
+
+        SetTarget();
+    }
+    public void SetTarget()
+    {
         if (target == null)
         {
 
@@ -26,13 +31,12 @@ public class MoveToTarget : MonoBehaviour
 
         else
         {
-          
-
-                transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
 
 
-            
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+
+
+
         }
-
     }
 }

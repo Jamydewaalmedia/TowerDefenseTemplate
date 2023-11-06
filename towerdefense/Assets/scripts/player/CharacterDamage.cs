@@ -16,9 +16,10 @@ public class CharacterDamage : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
 
-
-        //movemnt = false;
-
+        DamageAllTarget(col);
+    }
+    void DamageAllTarget(Collider2D col)
+    {
         foreach (string tag in targetTags)
         {
             if (col.gameObject.CompareTag(tag))

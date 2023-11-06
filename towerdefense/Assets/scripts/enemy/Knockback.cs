@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class Knockback : MonoBehaviour
     private Rigidbody2D rb2;
     public string[] targetTags;
     public float knockbackAmounth = 0.1f;
+    public static event Action oncollision2;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +28,7 @@ public class Knockback : MonoBehaviour
             if (col.gameObject.CompareTag(tag))
             {
                 knockback(knockbackAmounth);
+                oncollision2?.Invoke();
             }
         }
       

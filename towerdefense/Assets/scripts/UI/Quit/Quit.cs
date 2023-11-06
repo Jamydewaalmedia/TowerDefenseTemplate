@@ -1,0 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Quit : MonoBehaviour
+{
+ 
+
+    // Update is called once per frame
+    void Update()
+    {
+       if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+            Debug.Log("dog");
+        }
+    }
+    public void Quitaplication()
+    {
+        Application.Quit();
+        Debug.Log("quit the application");
+    }
+}
